@@ -21,4 +21,4 @@ jobs:
             cd /usr/projects/test-express
             git pull origin main
             /root/.local/share/pnpm/pnpm install
-            /root/.local/share/pnpm/pm2 restart
+            /root/.local/share/pnpm/pm2 restart 0
