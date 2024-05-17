@@ -7,13 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 9
       - name: running SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -25,5 +20,5 @@ jobs:
           script: |
             cd /usr/projects/test-express
             git pull origin main
-            pnpm install
-            pm2 restart
+            /root/.local/share/pnpm/pnpm install
+            /root/.local/share/pnpm/pm2 restart
