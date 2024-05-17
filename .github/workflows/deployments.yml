@@ -18,14 +18,7 @@ jobs:
           port: 22
           script_stop: true
           script: |
-            echo 'export PATH=$PATH:~/.local/share/pnpm' >> ~/.bashrc
-            source ~/.bashrc
             cd /usr/projects/test-express
             git pull origin main
-            pnpm install
-            pm2 restart 0
-            
-            # cd /usr/projects/test-express
-            # git pull origin main
-            # /root/.local/share/pnpm/pnpm install
-            # /root/.local/share/pnpm/pm2 restart 0
+            /root/.local/share/pnpm/pnpm install
+            /root/.local/share/pnpm/pm2 restart 0
