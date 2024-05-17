@@ -21,6 +21,7 @@ jobs:
             export PATH=$PATH:/root/.local/share/pnpm/pnpm
             export PATH=$PATH:/root/.local/share/pnpm/pm2
             source ~/.bashrc
+            cd /usr/projects/test-express
             git pull origin main
             pnpm install
             pm2 restart 0
