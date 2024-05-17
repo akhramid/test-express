@@ -20,4 +20,6 @@ jobs:
           script_stop: true
           script: |
             cd /usr/projects/test-express
-            node -v
+            git pull origin main
+            pnpm install
+            pm2 restart
