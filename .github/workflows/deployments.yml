@@ -18,7 +18,8 @@ jobs:
           port: 22
           script_stop: true
           script: |
-            export PNPM_HOME=/root/.local/share/pnpm/
+            echo 'export PATH=$PATH:~/.local/share/pnpm' >> ~/.bashrc
+            source ~/.bashrc
             cd /usr/projects/test-express
             git pull origin main
             pnpm install
